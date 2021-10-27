@@ -4,5 +4,11 @@
   "description": "caliculator of damage",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "scripts": {
+    "test": "jest"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "25.1.0"
+  }
 }
