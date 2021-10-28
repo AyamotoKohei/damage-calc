@@ -20,4 +20,12 @@ describe('#effectiveDamage()', () => {
         expect(dc.effectiveDamage(300, 2150, 0)).toBe(14);
         expect(dc.effectiveDamage(300, 2000, 2001)).toBe(300);
     });
+
+    test('実効防御力は0未満にならない', () => {
+        expect(dc.effectiveDamage(500, 100, 800)).toBe(500);
+    });
+
+    test('ダメージは小数点以下を四捨五入して整数にする', () => {
+        expect(dc.effectiveDamage(620, 100, 30)).toBe(365);
+    });
 });
